@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char font[] = "Input:pixelsize=15:antialias=true:autohint=true";
+char font[] = "Input:pixelsize=20:antialias=true:autohint=true";
 int borderpx = 2;
 
 /*
@@ -85,7 +85,7 @@ static unsigned int tabspaces = 8;
 /* Monokai dark and light from https://terminal.sexy */
 
 /* Terminal colors (16 first used in escape sequence) */
-const char *colorname[] = {
+const char *altcolorname[] = {
 
   /* 8 normal colors */
   [0] = "#272822", /* black   */
@@ -112,7 +112,7 @@ const char *colorname[] = {
   [257] = "#f8f8f2", /* foreground */
 };
 
-const char *altcolorname[] = {
+const char *colorname[] = {
 
   /* 8 normal colors */
   [0] = "#272822", /* black   */
