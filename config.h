@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char font[] = "Input:pixelsize=20:antialias=true:autohint=true";
+char font[] = "Fira Mono:size=14:antialias=true:autohint=true";
 int borderpx = 2;
 
 /*
@@ -88,7 +88,7 @@ static unsigned int tabspaces = 8;
 const char *altcolorname[] = {
 
   /* 8 normal colors */
-  [0] = "#272822", /* black   */
+  [0] = "#000000", /* black   */
   [1] = "#f92672", /* red     */
   [2] = "#a6e22e", /* green   */
   [3] = "#f4bf75", /* yellow  */
@@ -108,7 +108,7 @@ const char *altcolorname[] = {
   [15] = "#f9f8f5", /* white   */
 
   /* special colors */
-  [256] = "#272822", /* background */
+  [256] = "#000000", /* background */
   [257] = "#f8f8f2", /* foreground */
 };
 
