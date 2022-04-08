@@ -1769,6 +1769,13 @@ run:
 		if (!opt_title && !opt_line)
 			opt_title = basename(xstrdup(argv[0]));
 	}
+        /* Use dark theme by default at night. */
+        time_t current_raw_time = time(0);
+        struct tm day_time;
+        localtime_r(&day_time, &current_raw_time);
+        if (day_time.tm_hour < 8 || day_time.tm_hour >= 6) {
+          usealtcolors = 1;
+        }
 	setlocale(LC_CTYPE, "");
 	XSetLocaleModifiers("");
 	tnew(MAX(cols, 1), MAX(rows, 1));
