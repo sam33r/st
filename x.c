@@ -1773,7 +1773,7 @@ run:
         time_t current_raw_time = time(0);
         struct tm day_time;
         localtime_r(&day_time, &current_raw_time);
-        if (day_time.tm_hour < 8 || day_time.tm_hour >= 6) {
+        if (day_time.tm_hour < 8 || day_time.tm_hour >= 18) {
           usealtcolors = 1;
         }
 	setlocale(LC_CTYPE, "");
