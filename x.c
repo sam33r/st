@@ -1769,13 +1769,20 @@ run:
 		if (!opt_title && !opt_line)
 			opt_title = basename(xstrdup(argv[0]));
 	}
+
         /* Use dark theme by default at night. */
-        time_t current_raw_time = time(0);
-        struct tm day_time;
-        localtime_r(&day_time, &current_raw_time);
-        if (day_time.tm_hour < 8 || day_time.tm_hour >= 18) {
+        time_t now;
+        time(&now);
+        printf("Today is %s", ctime(&now));
+        struct tm *local = localtime(&now);
+        int hour;
+        hour = local->tm_hour;
+        if (hour < 8 || hour >= 18) {
           usealtcolors = 1;
+        } else {
+          usealtcolors = 0;
         }
+
 	setlocale(LC_CTYPE, "");
 	XSetLocaleModifiers("");
 	tnew(MAX(cols, 1), MAX(rows, 1));
